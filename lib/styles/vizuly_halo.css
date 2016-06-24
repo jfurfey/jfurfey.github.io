@@ -25,14 +25,14 @@
 
 .vz-halo-arc-slice {
     shape-rendering:auto;
-    fill-opacity: .45;
+    fill-opacity: .95;
 }
 
 .vz-halo-node {
     shape-rendering:auto;
     fill:#AAA;
-    fill-opacity: .3;
-    stroke-opacity:.15;
+    fill-opacity: .7;
+    stroke-opacity:.45;
 }
 
 .vz-halo-label {

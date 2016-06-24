@@ -244,8 +244,8 @@ function createPacLabel (x,y,l) {
 
     g.append("text")
         .style("font-size","11px")
+		.style("font-weight","bold")
         .style("fill",theme.skin().labelColor)
-        .style("fill-opacity",.75)
         .attr("text-anchor","middle")
         .attr("x", x)
         .attr("y", y)
@@ -255,7 +255,6 @@ function createPacLabel (x,y,l) {
     g.insert("rect","text")
         .style("shape-rendering","auto")
         .style("fill",theme.skin().labelFill)
-        .style("opacity",.45)
         .attr("width",rect.width+12)
         .attr("height",rect.height+12)
         .attr("rx",3)
