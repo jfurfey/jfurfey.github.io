@@ -164,7 +164,7 @@ function node_onMouseOver(e,d,i) {
     var x = rect.left;
     var y = rect.top + document.body.scrollTop;
 
-    createDataTip(x + d.r, y + d.r + 25,d.values[0].AFFIL, d.values[0].SCI_NAME,"Home Institution: " + d.values[0].HOME);
+    createDataTip(x + d.r, y + d.r + 25,d.values[0].AFFIL,"<img src=img/" + d.values[0].Photo + ">",d.values[0].SCI_NAME,"Home Institution: " + "<strong>" + d.values[0].HOME + "</strong>");
 }
 
 // For each PAC we want to create a datatip that shows the total of all contributions by that PAC
@@ -211,15 +211,18 @@ var datatip='<div class="tooltip" style="width: 250px; background-opacity:.5">' 
     '<div class="header2"> HEADER2 </div>' +
     '<div class="header-rule"></div>' +
     '<div class="header3"> HEADER3 </div>' +
+    '<div class="header-rule"></div>' +
+    '<div class="header4"> HEADER4 </div>' +
     '</div>';
 
 // This function uses the above html template to replace values and then creates a new <div> that it appends to the
 // document.body.  This is just one way you could implement a data tip.
-function createDataTip(x,y,h1,h2,h3) {
+function createDataTip(x,y,h1,h2,h3,h4) {
 
     var html = datatip.replace("HEADER1", h1);
     html = html.replace("HEADER2", h2);
     html = html.replace("HEADER3", h3);
+	html = html.replace("HEADER4", h4);
 
     d3.select("body")
         .append("div")
